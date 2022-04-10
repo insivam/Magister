@@ -3,7 +3,6 @@ package Classes;
 import java.util.Scanner;
 
 public class Professor {
-
     /*
      * Cria um sistema de Login e Senha do professor
      * 
@@ -14,27 +13,33 @@ public class Professor {
      */
     Scanner entrada = new Scanner(System.in);
 
-    public static boolean login() {
+    Desempenho desempenho = new Desempenho();
+
+    public boolean login() {
         Scanner entrada = new Scanner(System.in);
         String login;
         String senha;
 
-        do {
-            System.out.print("Digite seu login: ");
-            login = entrada.next();
-            entrada.nextLine();
+        System.out.println("\033[1;36m");
+        System.out.println("==============================");
+        System.out.println("|           ACESSO           |");
+        System.out.println("==============================");
 
-            System.out.print("Digite sua senha: ");
+        do {
+            System.out.print("\033[1;33m");
+            System.out.print(" Digite seu login: ");
+            login = entrada.next();
+
+            System.out.print(" Digite sua senha: ");
             senha = entrada.next();
 
             if (login.equals("Professor") && senha.equals("1969")) {
-                System.out.println("Entrando no Sistema.....");
                 return true;
             } else {
-                System.out.println("Login ou senha incorretos!");
-                return false;
+                System.out.println("\033[1;31m Login ou senha incorretos!\033[m\n");
             }
-        } while (!login.equals("Professor") && !senha.equals("1969"));
+        } while (!login.equals("Professor") || !senha.equals("1969"));
 
+        return false;
     }
 }

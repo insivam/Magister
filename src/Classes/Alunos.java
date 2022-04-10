@@ -11,5 +11,20 @@ public class Alunos {
      * 
      * Vai se chamar matrizAlunos
      */
+    String matrizAlunos[][] = {
+            { "Alana ", "", "", "40" },
+            { "Enzo ", "", "", "97" },
+            { "Miguel ", "", "", "89" },
+            { "Ravena ", "", "", "22" },
+            { "Valentina ", "", "", "55" }
+    };
+
+    public String[][] getMatrizAlunos() {
+        return matrizAlunos;
+    }
+
+    public void setMatrizAlunos(String[][] matrizAlunos) {
+        this.matrizAlunos = matrizAlunos;
+    }
 
 }
