@@ -1,2 +1,2 @@
-# Classe Desempenho
+# MAGISTER GENERATION
 Primeiro projeto durante o curso Generation
