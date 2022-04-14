@@ -18,7 +18,7 @@ public class Desempenho {
 
     public static void calculaDesempenho() {
         Scanner entrada = new Scanner(System.in);
-        int escolha;
+        int escolha = 0;
         String observacao = "";
 
         System.out.print("\033[1;36m");
@@ -27,18 +27,25 @@ public class Desempenho {
         System.out.println("==============================");
 
         for (int i = 0; i < alunos.getMatrizAlunos().length; i++) {
-            System.out.print("\033[1;36m");
-            System.out.println("\nQual o Desempenho de " + alunos.getMatrizAlunos()[i][0] + "?");
-            System.out.println(" 1. Ruim\n 2. Regular\n 3. Bom\n 4. Muito Bom ");
-            do { // Tratamento de erro
-                System.out.print("\033[1;33mSelecione uma opção: ");
-                escolha = entrada.nextInt();
+            System.out.println("\033[1;36m Qual o Desempenho de " + alunos.getMatrizAlunos()[i][0] + "?");
+            System.out.println("  1. Ruim\n  2. Regular\n  3. Bom\n  4. Muito Bom ");
+            while (true) {
+                try {
+                    System.out.print("\033[1;33m Selecione uma opção: ");
+                    escolha = entrada.nextInt();
+                } catch (Exception e) {
+                    System.out.println("\033[1;31m Digite um número válido!\n");
+                    entrada.next();
+                    continue;
+                }
 
                 if (escolha < 1 || escolha > 4) {
-                    System.out.println("\033[1;31mSelecione um número elegível!\033[m");
+                    System.out.println("\033[1;31m Opção inválida!\n");
+                    continue;
                 }
-                System.out.println();
-            } while (escolha < 1 || escolha > 4);
+                break;
+            }
+            System.out.println();
 
             if (escolha == 1) {
                 matrizAlunos[i][1] = "Ruim";
@@ -49,45 +56,54 @@ public class Desempenho {
             } else if (escolha == 4) {
                 matrizAlunos[i][1] = "Muito Bom";
             }
-            // Coloca o valor da escolha no array
 
+            // Coloca o valor da escolha no array
             alunos.setMatrizAlunos(matrizAlunos);
 
-            do { // Tratamento de erro
-                System.out.print(
-                        "\033[1;36mDeseja fazer uma observação?\n 1. Sim\n 2. Não\n\033[1;33mSelecione uma opção: ");
-                escolha = entrada.nextInt();
+            while (true) { // Tratamento de erro
+                try {
+                    System.out.print(
+                            "\033[1;36m Deseja fazer uma observação?\n  1. Sim\n  2. Não\n\033[1;33m Selecione uma opção: ");
+                    escolha = entrada.nextInt();
 
+                } catch (Exception e) {
+                    System.out.println("\033[1;31m Digite um número válido!\n");
+                    entrada.next();
+                    continue;
+                }
                 if (escolha < 1 || escolha > 2) {
-                    System.out.println("\033[1;31mSelecione um número valido!\033[m");
-
+                    System.out.println("\033[1;31m Selecione um número valido!\033[m\n");
+                    continue;
                 }
                 System.out.println();
-            } while (escolha < 1 || escolha > 2);
+                break;
+
+            }
 
             if (escolha == 1) {
 
                 entrada.nextLine();// --> como existe muitos nextInt toda vez que a tecla enter � teclada
-                System.out.println("\033[1;36mMensagem: \033[1;33m"); // um \n � computado desalinhado o codigo... um
-                                                                      // nextLine();
+                System.out.println("\033[1;36m Mensagem: \033[1;33m"); // um \n � computado desalinhado o codigo... um
                 // a mais �
                 // necess�rio.
                 observacao = entrada.nextLine();
 
                 // System.out.println(observacao); --> verificar se est� certo
-                System.out.println("\n\033[1;32mObrigado pelo feedback :)");
+                System.out.println("\n\033[1;32m Obrigado pelo feedback :)");
 
                 alunos.getMatrizAlunos()[i][2] = observacao;
             } else if (escolha == 2) {
-                System.out.println("Obrigado pelo feedback :)");
+                System.out.println("\033[1;32m Obrigado pelo feedback :)\033[m");
             } else {
-                System.out.println("Selecione um número elegível!");
+                System.out.println("\033[1;31m Selecione um número elegível!\033[m");
             }
             if (i != matrizAlunos.length - 1) {
                 System.out.println("\n\033[m==============================");
             }
+            System.out.println();
         }
         return;
+
     }
 
     public static void mostraMatriz() {
@@ -97,14 +113,21 @@ public class Desempenho {
 
         System.out.println("\033[1;36m");
         System.out.println("==============================");
-        System.out.println("|         RESPONSÁVEL         |");
+        System.out.println("|         RESPONSÁVEL        |");
         System.out.println("==============================");
+        while (true) {
+            try {
+                System.out.print("\033[1;33m Digite o RA do aluno: ");
+                ra_aluno = leia.nextInt();
+                break;
 
-        System.out.print("\033[1;33m");
-        System.out.print(" Digite o RA do aluno: ");
-        ra_aluno = leia.nextInt();
+            } catch (Exception e) {
+                System.out.println("\033[1;31m ERRO: Digite um número válido!\n");
+                leia.nextLine();
+            }
+        }
 
-        System.out.print("\033[1;36m");
+        System.out.println("\033[1;36m");
         for (int l = 0; l < matrizAlunos.length; l++) {
             if (matrizAlunos[l][3].equals(String.valueOf(ra_aluno))) {
                 c = l;
@@ -116,7 +139,41 @@ public class Desempenho {
         }
         System.out.println(" Nome: " + matrizAlunos[c][0]);
         System.out.println(" Desempenho: " + matrizAlunos[c][1]);
-        System.out.println(" Sugestão: " + matrizAlunos[c][2]);
+        System.out.println(" Sugestão:\n" + matrizAlunos[c][2]);
         System.out.println();
+
+        if (matrizAlunos[c][1] == "Muito Bom") {
+            System.out.println("Aluno com vontade de aprender," +
+                    "realiza as entregas no prazo," +
+                    "se expressa, tira dúvidas," +
+                    "vai atrás de forma autonoma," +
+                    "indo além do conteúdo e busca" +
+                    "aprimorar o que foi aprendido" +
+                    "na aula");
+        } else if (matrizAlunos[c][1] == "Bom") {
+            System.out.println(" aprender, realiza as entregas " +
+                    "no prazo e atinge e atinge as" +
+                    "expectativas do professor(a)," +
+                    "mas ainda não se expõe diante" +
+                    "da turma;");
+        } else if (matrizAlunos[c][1] == "Regular") {
+            System.out.println(" Aluno não realiza as entregas" +
+                    "no prazo e não entrega" +
+                    "algumas atividades e tem" +
+                    "dificuldades de manter a" +
+                    "atenção na aula.");
+        } else if (matrizAlunos[c][1] == "Ruim") {
+            System.out.println("  Aluno não aprende o conteúdo" +
+                    "e não demonstra interesse em" +
+                    "aprender, mesmo explicando de" +
+                    "formas diferentes, não" +
+                    "participa das atividades" +
+                    "propostas e não faz as " +
+                    "entregas, bagunça muito " +
+                    "durante a aula e atrapalha os" +
+                    "colegas, não segue as" +
+                    "orientações do(a)" +
+                    "professor(a) em sala de aula");
+        }
     }
 }

@@ -10,7 +10,7 @@ public class Main {
 
 		while (true) {
 
-			int opcao;
+			int opcao = 0;
 			System.out.print("\033[1;36m");
 			System.out.println("==============================");
 			System.out.println("|            MENU            |");
@@ -21,13 +21,20 @@ public class Main {
 			System.out.println("  3. Sair                     ");
 
 			do { // Verifica se o usuario digitou um número válido
-				System.out.print("\033[1;33m");
-				System.out.print(" Selecione uma opção: ");
-				opcao = leia.nextInt();
+				try {
+					System.out.print("\033[1;33m");
+					System.out.print(" Selecione uma opção: ");
+
+					opcao = leia.nextInt();
+				} catch (Exception e) {
+					System.out.print("\033[1;31m");
+					System.out.println(" Opção inválida, digite novamente!\n");
+					leia.next();
+					continue;
+				}
 
 				if (opcao < 1 || opcao > 3) {
 					System.out.println("\033[1;31m Selecione uma opção válida!\033[m\n");
-
 				}
 			} while (opcao < 1 || opcao > 3);
 
