@@ -25,7 +25,7 @@ Garantir o alinhamento e envolvimento entre a família e escola no processo de e
 ## Etapas de utilização
 
 <b align="center" >
-Professor: 
+Professor 
 </b>
   
 * Usuário professor entra com login e senha
@@ -33,7 +33,7 @@ Professor:
 * Pode opção de colocar uma obervação / sugestão
 
 <b align="center" >
-Responsável: 
+Responsável 
 </b>
 
 * Coloca um RA para visualização
