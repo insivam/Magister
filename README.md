@@ -60,7 +60,7 @@ Responsável
 <td align="center"><a href="https://github.com/igorcanunes"><img style="border-radius: 50%;" src="https://github.com/igorcanunes.png" width="100px;" alt="Igor Nunes"/><br /><sub><b>Igor Nunes</b></sub></a><br/></td> 
 <td align="center"><a href="https://github.com/insivam"><img style="border-radius: 50%;" src="https://github.com/insivam.png" width="100px;" alt="Vitor Rodrigues"/><br /><sub><b>Vitor Rodrigues</b></sub></a><br/></td> 
 <td align="center"><a href="https://github.com/milenaFO"><img style="border-radius: 50%;" src="https://github.com/milenaFO.png" width="100px;" alt="Milena Oliveira"/><br /><sub><b>Milena Oliveira</b></sub></a><br/></td> 
-<td align="center"><a href="https://github.com/willjpg"><img style="border-radius: 50%;" src="https://github.com/willjpg.png" width="100px;" alt="William Silva"/><br /><sub><b>William Silva</b></sub></a><br/></td> 
+<td align="center"><a href="https://github.com/willjpg"><img style="border-radius: 50%;" src="https://github.com/willjpg.png" width="100px;" alt="Willian Silva"/><br /><sub><b>Willian Silva</b></sub></a><br/></td> 
 <td align="center"><a href="https://github.com/YasminSilva007"><img style="border-radius: 50%;" src="https://github.com/YasminSilva007.png" width="100px;" alt="Yasmin Silva"/><br /><sub><b>Yasmin Silva</b></sub></a><br/></td>
 </table>
 
