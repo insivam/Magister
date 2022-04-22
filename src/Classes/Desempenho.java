@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Desempenho {
     /*
-     * IrÃ¡ passar por uma lista de alunos
+     * Irá passar por uma lista de alunos
      * e deixara o professor selecionar um desempenho
      * de uma lista de desempenhos (ex: Bom, Regular, Ruim)
      * O professor tambem pode adicionar uma sugestÃ£o para
-     * melhora de desempenho (Não Ã© obrigatorio)
+     * melhora de desempenho (Não obrigatorio)
      * 
      * Vai se chamar calculaDesempenho
      * e vai receber a matrizAlunos
@@ -82,10 +82,9 @@ public class Desempenho {
 
             if (escolha == 1) {
 
-                entrada.nextLine();// --> como existe muitos nextInt toda vez que a tecla enter � teclada
-                System.out.println("\033[1;36m Mensagem: \033[1;33m"); // um \n � computado desalinhado o codigo... um
-                // a mais �
-                // necess�rio.
+                entrada.nextLine();// --> como existe muitos nextInt toda vez que a tecla enter é teclada
+                System.out.println("\033[1;36m Mensagem: \033[1;33m"); // um \n é computado desalinhado o codigo... um nextLine a mais é  necessário.
+               
                 observacao = entrada.nextLine();
 
                 // System.out.println(observacao); --> verificar se est� certo
@@ -139,41 +138,41 @@ public class Desempenho {
         }
         System.out.println(" Nome: " + matrizAlunos[c][0]);
         System.out.println(" Desempenho: " + matrizAlunos[c][1]);
-        System.out.println(" Sugestão:\n" + matrizAlunos[c][2]);
+        System.out.println(" Observação:\n" + matrizAlunos[c][2]);
         System.out.println();
 
         if (matrizAlunos[c][1] == "Muito Bom") {
-            System.out.println("Aluno com vontade de aprender," +
-                    "realiza as entregas no prazo," +
-                    "se expressa, tira dúvidas," +
-                    "vai atrás de forma autonoma," +
-                    "indo além do conteúdo e busca" +
-                    "aprimorar o que foi aprendido" +
-                    "na aula");
+            System.out.println("Muito bom: Aluno com vontade de aprender," +
+                    " realiza as entregas no prazo," +
+                    " se expressa, tira dúvidas," +
+                    " vai atrás de forma autonoma," +
+                    " indo além do conteúdo e busca" +
+                    " aprimorar o que foi aprendido" +
+                    " na aula");
         } else if (matrizAlunos[c][1] == "Bom") {
-            System.out.println(" aprender, realiza as entregas " +
-                    "no prazo e atinge e atinge as" +
-                    "expectativas do professor(a)," +
-                    "mas ainda não se expõe diante" +
-                    "da turma;");
+            System.out.println("Bom: Aluno com vontade de aprender, realiza as entregas " +
+                    " no prazo e atinge as" +
+                    " expectativas do professor(a)," +
+                    " mas ainda não se expõe diante" +
+                    " da turma;");
         } else if (matrizAlunos[c][1] == "Regular") {
-            System.out.println(" Aluno não realiza as entregas" +
-                    "no prazo e não entrega" +
-                    "algumas atividades e tem" +
-                    "dificuldades de manter a" +
-                    "atenção na aula.");
+            System.out.println("Regular: Aluno não realiza as entregas" +
+                    " no prazo, não entrega" +
+                    " algumas atividades e tem" +
+                    " dificuldades de manter a" +
+                    " atenção na aula.");
         } else if (matrizAlunos[c][1] == "Ruim") {
-            System.out.println("  Aluno não aprende o conteúdo" +
-                    "e não demonstra interesse em" +
-                    "aprender, mesmo explicando de" +
-                    "formas diferentes, não" +
-                    "participa das atividades" +
-                    "propostas e não faz as " +
-                    "entregas, bagunça muito " +
-                    "durante a aula e atrapalha os" +
-                    "colegas, não segue as" +
-                    "orientações do(a)" +
-                    "professor(a) em sala de aula");
+            System.out.println("Ruim: Aluno não aprende o conteúdo" +
+                    " e não demonstra interesse em" +
+                    " aprender, mesmo explicando de" +
+                    " formas diferentes, não" +
+                    " participa das atividades" +
+                    " propostas e não faz as " +
+                    " entregas, bagunça muito " +
+                    " durante a aula e atrapalha os" +
+                    " colegas, não segue as" +
+                    " orientações do(a)" +
+                    " professor(a) em sala de aula");
         }
     }
 }
