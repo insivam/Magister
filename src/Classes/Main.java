@@ -17,7 +17,7 @@ public class Main {
 			System.out.println("==============================");
 			System.out.println(" Qual você quer acessar?      ");
 			System.out.println("  1. Professor                ");
-			System.out.println("  2. Responsavel              ");
+			System.out.println("  2. Responsável              ");
 			System.out.println("  3. Sair                     ");
 
 			do { // Verifica se o usuario digitou um número válido
@@ -50,13 +50,13 @@ public class Main {
 			} else if (opcao == 3) {
 				System.out.println("\033[1;32m\n Obrigado por usar o sistema!\n\033[1;37m");
 				System.out.println("=============DEVS=============");
-				System.out.println("         ALINES RASCHE        ");
+				System.out.println("         ALINE RASCHE         ");
 				System.out.println("          DAYANA TITO         ");
 				System.out.println("           IGOR NUNES         ");
 				System.out.println("        MILENA OLIVEIRA       ");
 				System.out.println("        VITOR RODRIGUES       ");
-				System.out.println("         WILLIAN SILVA        ");
 				System.out.println("            YASMIN            ");
+				System.out.println("         WILLIAN SILVA        ");
 				System.out.println("==============================");
 				System.out.println("\033[m");
 
