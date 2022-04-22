@@ -56,7 +56,7 @@ public class Main {
 				System.out.println("        MILENA OLIVEIRA       ");
 				System.out.println("        VITOR RODRIGUES       ");
 				System.out.println("            YASMIN            ");
-				System.out.println("         WILLIAM SILVA        ");
+				System.out.println("         WILLIAN SILVA        ");
 				System.out.println("==============================");
 				System.out.println("\033[m");
 
