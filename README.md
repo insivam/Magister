@@ -1,10 +1,9 @@
+<img align="right" width="285" src="https://cdn.discordapp.com/attachments/964244719741841438/964257096990339142/unknown.png">
 <h1 align="center">MAGISTER GENERATION</h1> 
-<div align=center>
 
-<img src="https://cdn.discordapp.com/attachments/964244719741841438/964257096990339142/unknown.png" width=200px height=200px>
-
-
-## Sobre o projeto 
+<div align="center">
+  
+## Sobre o projeto
 <p>
 Garantir o alinhamento e envolvimento entre a família e escola no processo de ensino-aprendizado dos alunos, possibilitando o acompanhamento constante dos pais e responsáveis e intervenções mais efetivas ao longo do ano.
 </p> 
