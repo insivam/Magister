@@ -3,7 +3,7 @@
 
 <div align="center">
   
-## Sobre o projeto
+## Objetivo do projeto
 <p>
 Garantir o alinhamento e envolvimento entre a família e escola no processo de ensino-aprendizado dos alunos, possibilitando o acompanhamento constante dos pais e responsáveis e intervenções mais efetivas ao longo do ano.
 </p> 
