@@ -1,4 +1,4 @@
-<img align="right" width="285" src="https://cdn.discordapp.com/attachments/964244719741841438/964257096990339142/unknown.png">
+<img align="right" width="285" src="https://i.imgur.com/DclqOfy.png">
 <h1 align="center">MAGISTER GENERATION</h1> 
 
 <div align="center">
